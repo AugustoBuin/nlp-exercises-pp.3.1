@@ -17,8 +17,8 @@ def load_reviews(filepath):
         return [line.strip() for line in f if line.strip()]
 
 
-reviews = load_reviews("../reviews/reviews.txt")  # ajuste o path conforme necessário
-print(reviews)
+reviews = load_reviews("../reviews/reviews.txt")  # reviews path
+# print(reviews)
 
 # Preprocessing
 def preprocess(text):
@@ -31,6 +31,7 @@ def preprocess(text):
 
 
 processed_reviews = [preprocess(review) for review in reviews]
+print(processed_reviews)
 
 # TF-IDF Vectorizer
 vectorizer = TfidfVectorizer()
